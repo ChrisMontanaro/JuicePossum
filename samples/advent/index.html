@@ -1,0 +1,189 @@
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<title>Advent Rising, Crowd System</title>
+</head>
+
+<body>
+
+	<div id="page">
+	
+		<h1>Advent Rising</h1>
+	
+		<p>Unreal Engine 2 Modification: 2D Crowd System</p>
+
+		<p class="text">
+		A 2D Crowd System for rendering large crowds in the distance which exhibit designer-specified, real-time behaviors such as  
+		battling, path-following, and socializing.
+		</p>
+		
+		<h2>Details</h2>
+		
+		<p class="text">
+		The purpose of this project was to add functionality to the Unreal Editor that afforded designers the ability to place large 
+		crowds of actors in the distance, adjust a number of settings to dictate their behavior, and allow an unscripted scene to
+		unfold which emulated natural behavior as closely as possible.  The types of behavior supported were battling, socializing,
+		and path-following.
+		</p>
+		<p class="text">
+		What follows are in-Editor screenshots depicting a variety of viewports from within the Unreal Editor which demonstrate how 
+		such crowds could be placed into the 3D world, and the resultant scenes produced.  Bear in mind that all art is
+		programmer-generated, intended to showcase the capabilities of the new feature.  In no way are any of the screenshots
+		representative of a polished scene intended for use in-game.
+		</p>
+		<!-- <p class="textbottom"> -->
+		<p class="text">
+		While the following scenes obviously do not stand up to scrutiny from such a close distance, the requirements for this feature 
+		called for scenes that take place far off in the background (such as in a distant valley as seen from a mountain cliff).  At 
+		such distances, the difference between sprite-based and model-based characters is unlikely to be discernable.
+		</p>
+
+		<h2 style="margin-bottom:-50">Screenshots</h2>
+		<!--
+		<p class="less">(mouseover for highlights)</p>
+		-->
+
+		<table class="text" border="0">
+
+		<tr>
+			<td> <h3>Sample Source Art:</h3> </td>
+		</tr>
+
+		<tr align="center">
+			<td>
+				<IMG SRC="HumanAnim-450x450.png" NAME="HumanAnim" BORDER="1" ALT="">
+			</td>
+			<td>
+				<IMG SRC="HumanAnimShade-450x450.png" NAME="HumanAnimShade" BORDER="1" ALT="">
+			</td>
+		</tr>
+
+		<tr>
+			<td colspan=2>
+				<b>The source art used in the following examples.</b>  The crowd system supported a symmetrical texture grid of 2D sprite
+				frames to contain the desired animations.  The number of frames in the grid and the frame offsets for each animation were
+				specified by the designer. In the above example, frames 0,1 represent an idle animation, frames 2-6 represent a running 
+				animation, etc.
+				<br><br>
+			</td>
+		</tr>
+<!--
+		<tr align="center">
+			<td>
+				<IMG SRC="HumanAnimShade.png" NAME="HumanAnimShade" BORDER="1" ALT="">
+				<br>
+				An example of two path-following crowds in action.
+				<br><br>
+			</td>
+		</tr>
+-->
+		<tr>
+			<br>
+			<td> <h3>Path-Following:<h3> </td>
+		</tr>
+		
+		<tr>
+			<td colspan=2>
+				<IMG SRC="Path01.png" NAME="Path01" BORDER="1" ALT="">
+				<br>
+				<b>An example of two path-following crowds in action.</b>
+				<br><br>
+			</td>
+		</tr>
+		
+		<tr>
+			<td colspan=2>
+				<IMG SRC="Path02.png" NAME="Path02" BORDER="1" ALT="">
+				<br>
+				<b>The previous path-following scene as it appears inside the Unreal Editor from the top-down orthogonal viewport.</b>
+				The animation textures serve as placeholders to represent the individual crowds themselves, although their positions
+				are irrelevant.  The M icon is the crowd manager object that represents this particular scene, while the P icons are
+				the path nodes, which can be associated with either crowd.  Their order is determined by a value which is also 
+				designer-specified.	
+				<br><br>
+			</td>
+		</tr>
+
+
+
+		<tr>
+		<br>
+		<td> <h3>Socializing:<h3> </td>
+		</tr>
+		
+		<tr>
+			<td colspan=2>
+				<IMG SRC="Social01.png" NAME="Social01" BORDER="1" ALT="">
+				<br>
+				<b>An example of four socializing crowds in action.</b>  They appear to all be in the same frame of animation, since the 
+				texture for crowd battles was used in this example.  In practice, all 16 (or more) frames could be dedicated to idling,
+				walking, conversing, etc., in which case a much truer scene would unfold.
+				<br><br>
+			</td>
+		</tr>
+		
+		<tr>
+			<td colspan=2>
+				<IMG SRC="Social02.png" NAME="Social02" BORDER="1" ALT="">
+				<br>
+				<b>The previous socializing scene as it appears inside the Unreal Editor from the top-down orthogonal viewport.</b>  The 
+				circles represent individual crowds, with the circumference of the circles representing their boundaries.  The arrows
+				indicate the initial facing direction of crowd members, which can also be random or center-facing.  Social crowds could 
+				be related to other social crowds as friends, in which case members could exchange and associate with one other.  As 
+				before, all settings were adjustable.
+				<br><br>
+			</td>
+		</tr>
+		
+		<tr>
+			<td colspan=2>
+				<IMG SRC="Social03.png" NAME="Social03" BORDER="1" ALT="">
+				<br>
+				<b>The previous path-following scene as it appears inside the Unreal Editor from a perspective viewport.</b>
+				<br><br>
+			</td>
+		</tr>
+
+
+		<tr>
+		<br>
+		<td> <h3>Battling:<h3> </td>
+		</tr>
+		
+		<tr>
+			<td colspan=2>
+				<IMG SRC="Battle01.png" NAME="Battle01" BORDER="1" ALT="">
+				<br>
+				<b>An extreme example of two 5000-member crowds doing battle with projectiles and melee attacks to demonstrate the
+				capabilities of the crowd system.</b>  The battling crowd system was the most complex, and essentially allowed for 
+				massive, real-time battles between factions in what resembles an RPG-style confrontation.  Numerous settings could be 
+				specified in order to effect a specific outcome, including member velocity, hit points, strength, attack durations and 
+				delays, reload times, etc.  This resulted in true, unique battles in real time with the potential for unpredictable 
+				results if so desired.  A natural variance was built in to every action, a setting which could also be adjusted by the 
+				designer.  Notably, the above scene ran well above the target frame rate on the Xbox.
+			</td>
+		</tr>
+	
+		</table>
+		
+		<h2>Contact:</h2>
+		
+		<div class="text">
+		Chris Montanaro<br>
+		<IMG SRC="email.png" NAME="email" BORDER="0" ALT=""><br>
+		<a href="http://www.juicepossum.com/chrismontanaro/resume/">Résumé</a>
+		</div>
+		
+		<div class="text" style="position:relative; left:855px; top:-10px;">
+		<a href="../">Samples Index</a>
+		</div>
+		
+	</div>
+
+</body>
+
+</html>

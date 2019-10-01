@@ -1,0 +1,150 @@
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+	<!-- <script type="text/javascript" src="flowplayer-3.1.4.min.js"></script> -->
+	
+	<!-- Load Javascript --> 
+	<script type="text/javascript" src="../../flowplayer/flowplayer-3.1.4.min.js"></script> 
+	
+	<!-- Player Config --> 
+	<script type="text/javascript"> 
+	$f("player", "../../flowplayer/flowplayer-3.1.5.swf", {  
+		clip: {  
+			url: 'Asphalt01.flv',  
+			autoPlay: false  
+		}   
+	}); 
+	</script> 
+		
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<title>Asphalt: Urban GT 2 3D, Procedural Particle Effect</title>
+
+</head>
+
+<body>
+
+	<div id="page">
+	
+		<h1>Asphalt: Urban GT 2 3D</h1>
+	
+		<p>Particle Effect Enhancement: Nitro Exhaust</p>
+		<p class="text">
+		A graphical improvement to the nitro exhaust particle effect to produce a more realistic and powerful visual effect.
+		</p>
+		
+		<h2>Details</h2>
+		
+		<p class="text">
+		This is an example of a simple enhancement task which had a large impact on the final product.  The player accumulates the 
+		capacity to use nitro "boosts" for brief surges of acceleration at up to three levels.  The requirements for this task 
+		were simply to improve the nitro exhaust graphical effect, since the existing implementation was poor.
+		</p>
+		
+		<p class="text">
+		<i>Asphalt: Urban GT 2 3D</i> had no concept of a particle-generator or tool to accomplish such a task, and as such, all
+		particle effects were hand-coded; the nitro effect being no exception.  The original and improved versions can be seen
+		below.
+		</p>
+
+		<p class="text">
+		The sensation of speed and energy that the improved nitro effect produces should be self-evident.  Consult the 
+		screenshots for guidance on what to look for.
+		</p>
+
+		<h2>Video</h2>
+		
+		<!-- this A tag is where your Flowplayer will be placed. it can be anywhere -->
+		<!--
+		<a  
+			 href="Asphalt01.flv"
+			 style="display:block;width:320px;height:263px"  
+			 id="player"> 
+		</a> 
+		-->
+		<!-- this will install flowplayer inside previous A- tag. -->
+		<!--
+		<script>
+			flowplayer("player", "flowplayer-3.1.5.swf");
+		</script>
+		-->
+		 
+		<!-- Player DIV -->
+		<!-- <div id="player" style="width:320; height:263px;"></div> -->
+
+
+		<!-- HTML 5 Video -->
+		<div style="position: relative; width: 320px; height: 263px">
+			<video id=0 controls width=320 height=263>
+				<source src="Asphalt01.ogv" type='video/ogg; codecs="theora, vorbis"'/>
+				<source src="Asphalt01.webm" type='video/webm' >
+				<source src="Asphalt01.mp4" type='video/mp4'>
+				<p>Video is not visible. Your browser may not support HTML5 video.</p>
+			</video>
+		</div>
+
+<h2>Screenshots</h2></th>
+<p class="less">(mouseover for highlights)</p>
+
+	<table border="0">
+	<!-- <th colspan=2> <H1>Screenshot Comparison</H1>
+	<p class="less">(mouseover for highlights)</p> </th>-->
+
+	<tr align="center">
+	  <td align="center">
+		<H3>Original Version</H3>
+	  </td>
+	  <td align="center">
+		<H3>Improved Version</H3>
+	  </td>
+	</tr>
+
+	<tr align="center" valign="bottom">
+	  <td align="center">
+		<A onMouseOver="document.old01.src='old_exhaust_01_highlighted.jpg'" onMouseOut="document.old01.src='old_exhaust_01.jpg'">
+		<IMG SRC="old_exhaust_01.jpg" NAME="old01" BORDER="1" ALT="">
+		</A>
+	  </td>
+	  <td align="center">
+		<A onmouseover="document.new01.src='new_exhaust_01_highlighted.jpg'" onmouseout="document.new01.src='new_exhaust_01.jpg'">
+		<IMG SRC="new_exhaust_01.jpg" NAME="new01" BORDER="1" ALT="">
+		</A>
+	  </td>
+	</tr>
+
+	<tr><td><br></td><td><br></td></tr>
+
+	<tr align="center" valign="center">
+	  <td align="center">
+		<A onMouseOver="document.old02.src='old_exhaust_02_highlighted.jpg'" onMouseOut="document.old02.src='old_exhaust_02.jpg'">
+		<IMG SRC="old_exhaust_02.jpg" NAME="old02" BORDER="1" ALT="">
+		</A>
+	  </td>
+	  <td align="center">
+		<A onmouseover="document.new02.src='new_exhaust_02_highlighted.jpg'" onmouseout="document.new02.src='new_exhaust_02.jpg'">
+		<IMG SRC="new_exhaust_02.jpg" NAME="new02" BORDER="1" ALT="">
+		</A>
+	  </td>
+	</tr>
+
+	</table>
+
+	<h2>Contact:</h2>
+	
+	<div class="text">
+	Chris Montanaro<br>
+	<IMG SRC="email.png" NAME="email" BORDER="0" ALT=""><br>
+	<a href="http://www.juicepossum.com/chrismontanaro/resume/">Résumé</a>
+	</div>
+		
+	<div class="text" style="position:relative; left:545px; top:-10px;">
+	<a href="../">Samples Index</a>
+	</div>
+		
+</div>
+
+</body>
+
+</html>

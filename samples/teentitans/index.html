@@ -1,0 +1,105 @@
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+	<!-- Load Javascript --> 
+	<script type="text/javascript" src="../../flowplayer/flowplayer-3.1.4.min.js"></script> 
+	
+	<!-- Player Config --> 
+	<script type="text/javascript"> 
+	$f("player", "../../flowplayer/flowplayer-3.1.5.swf", {  
+		clip: {  
+			url: 'TeenTitans01.flv',  
+			autoPlay: false  
+		}   
+	}); 
+	</script> 
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<title>Teen Titans, Arcade Minigames</title>
+</head>
+
+<body>
+
+	<div id="page">
+	
+		<h1>Teen Titans</h1>
+	
+		<p>Arcade-Style Minigames</p>
+
+		<p class="text">
+		A pair of minigames for the multi-platform console game <i>Teen Titans</i> which are homages to the early arcade classics
+		<i>Pong</i> and <i>Space Invaders</i>.  The player must complete each game in order to advance to the final boss battle.
+		</p>
+		
+		<h2>Details</h2>
+		
+		<p class="text">
+		The purpose of this project was to add arcade-style minigames to the gameflow, both as an opportunity to briefly introduce a 
+		new game mechanic into the somewhat repetitive beat 'em up gameplay, and to accentuate the story element revealing that the
+		Teen Titans are actually trapped inside a video game.
+		</p>
+		<p class="text">
+		The minigames were initially scrapped by the development team due to time constraints, at which point I was asked by Majesco
+		to visit the developer, integrate into the team and workflow, and become acquainted with their proprietary engine and toolset
+		as quickly as possible in order to enable remote development for the remainder of the project.
+		</p>
+		<p class="text">
+		Since lack of personnel was the reason cited for cancelling the minigames in the first place, development was to proceed with
+		minimal time commitment from the existing team members.  I was therefore called upon to implement almost all aspects of both
+		minigames, including game mechanics, physics, AI, visual and audio effects, interface, etc.  What resulted is two complete
+		minigames produced single-handedly by myself, utilizing almost entirely pre-existing assets.
+		</p>
+		<p class="text">
+		The following is a video medley of the two minigames as they appeared in the release version of <i>Teen Titans</i>.
+		</p>
+
+		<h2>Video</h2>
+
+		<!-- this A tag is where your Flowplayer will be placed. it can be anywhere -->
+		<!--
+		<a  
+			 href="TeenTitans01.flv"
+			 style="display:block;width:480px;height:383px"  
+			 id="player"> 
+		</a> 
+		-->
+		<!-- this will install flowplayer inside previous A- tag. -->
+		<!--
+		<script>
+			flowplayer("player", "flowplayer-3.1.5.swf");
+		</script>
+		-->
+		 
+		<!-- Player DIV --> 
+		<!-- <div id="player" style="width:480; height:383px;"></div> -->
+		
+		 <div style="position: relative; width: 480px; height: 383px">
+			<video id=0 controls width=480 height=383>
+				<source src="TeenTitans01.ogv" type='video/ogg; codecs="theora, vorbis"'/>
+				<source src="TeenTitans01.webm" type='video/webm' >
+				<source src="TeenTitans01.mp4" type='video/mp4'>
+				<p>Video is not visible. Your browser may not support HTML5 video.</p>
+			</video>
+		</div>
+
+
+		<h2>Contact:</h2>
+		
+		<div class="text">
+		Chris Montanaro<br>
+		<IMG SRC="email.png" NAME="email" BORDER="0" ALT=""><br>
+		<a href="http://www.juicepossum.com/chrismontanaro/resume/">Résumé</a>
+		</div>
+		
+		<div class="text" style="position:relative; left:545; top:-10px;">
+		<a href="../">Samples Index</a>
+		</div>
+		
+	</div>
+
+</body>
+
+</html>
